@@ -39,13 +39,13 @@ const QuestionsScreen = () => {
     });
   };
 
-  const getTotalScore = useMemo(() => {
+  const getTotalScore = () => {
     let score = 0;
     answerArray.forEach(answer => {
       score += answer.points;
     });
     return score;
-  }, [answerArray]);
+  };
 
   const getQuestionCount = useMemo(() => {
     return ((currentIndex + 1) / 5) * 100;

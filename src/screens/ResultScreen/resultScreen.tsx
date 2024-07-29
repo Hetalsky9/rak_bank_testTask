@@ -12,7 +12,7 @@ const ResultScreen = () => {
   const navigation = useNavigation<AppNavigationProps>();
   const calculatedRisk = params.totalScore;
 
-  const getRisk = () => {
+  const getRiskText = () => {
     if (calculatedRisk <= 6) return 'Low Risk';
     else if (calculatedRisk <= 12) return 'Medium Risk';
     else return 'High Risk';
@@ -28,7 +28,7 @@ const ResultScreen = () => {
           </Text>
           <View style={styles.centeredView}>
             <Text style={styles.riskTextStyle}>{calculatedRisk}</Text>
-            <Text style={styles.riskTextStyle}>{getRisk()}</Text>
+            <Text style={styles.riskTextStyle}>{getRiskText()}</Text>
           </View>
         </View>
       </View>
